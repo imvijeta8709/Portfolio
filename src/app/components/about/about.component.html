@@ -1,0 +1,60 @@
+<div class="about-section">
+  <div class="about-container">
+    <div class="about-row">
+      <div class="about-col">
+        <h1 class="project-heading">
+          Know Who <strong class="purple">I'M</strong>
+        </h1>
+        <mat-card class="quote-card-view">
+     <mat-card-content>
+  <p style="text-align: justify">
+    Hi Everyone, I am <span class="purple">Vijeta Mishra</span>
+    from <span class="purple">Lucknow, Uttar Pradesh, India.</span>
+    <br />
+    I am currently employed as a software developer at DevLogix.
+    <br />
+    I have completed <span class="purple">B.Tech in Information Technology (IT)</span>.
+    <br />
+    <br />
+    Apart from coding, some other activities that I love to do!
+  </p>
+
+  <ul class="about-activity">
+    <li>🎮 Playing Games</li>
+    <li>✍️ Writing Tech Blogs</li>
+    <li>🚀 Travelling</li>
+  </ul>
+
+  <p style="color: rgb(155, 126, 172)">
+    "Strive to build things that make a difference!"
+  </p>
+  <footer style="color: rgb(155, 126, 172)">- Vijeta Mishra</footer>
+</mat-card-content>
+</mat-card>
+      </div>
+      <div class="about-col">
+        <img src="assets/about.png" alt="about" class="img-fluid" />
+      </div>
+    </div>
+
+    <h1 class="project-heading">
+      Professional <strong class="purple">Skillset</strong>
+    </h1>
+    <div class="tech-stack-container">
+      <div class="tech-icons" *ngFor="let tech of techStack">
+        <img [src]="tech.icon" [alt]="tech.name" class="tech-icon-images" />
+        <span class="tech-icons-text">{{ tech.name }}</span>
+      </div>
+    </div>
+
+    <h1 class="project-heading">
+      <strong class="purple">Tools</strong> I use
+    </h1>
+    <div class="tech-stack-container">
+      <div class="tech-icons" *ngFor="let tool of tools">
+        <img [src]="tool.icon" [alt]="tool.name" class="tech-icon-images" />
+        <span class="tech-icons-text">{{ tool.name }}</span>
+      </div>
+    </div>
+  </div>
+</div>

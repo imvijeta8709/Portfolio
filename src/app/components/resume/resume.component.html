@@ -1,0 +1,21 @@
+<div class="resume-section">
+  <div class="resume-container">
+    <div class="resume-button-container">
+      <button mat-raised-button color="primary" (click)="downloadResume()" class="download-button">
+        <mat-icon>download</mat-icon>
+        Download CV
+      </button>
+    </div>
+
+    <div class="resume-content">
+      <iframe [src]="pdfUrl" class="resume-iframe" title="Resume PDF"></iframe>
+    </div>
+
+    <div class="resume-button-container">
+      <button mat-raised-button color="primary" (click)="downloadResume()" class="download-button">
+        <mat-icon>download</mat-icon>
+        Download CV
+      </button>
+    </div>
+  </div>
+</div>

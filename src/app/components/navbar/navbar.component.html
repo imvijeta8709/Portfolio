@@ -1,0 +1,61 @@
+<nav class="navbar" [class.sticky]="navColour">
+  <div class="navbar-container">
+    <a routerLink="/" class="navbar-brand">
+       <strong class="logo"> Vm.</strong>
+      <!-- <img src="assets/logo.png" class="logo" alt="brand" /> -->
+    </a>
+    
+    <button class="navbar-toggler" [class.collapsed]="!expanded" (click)="toggleNavbar()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="navbar-collapse" [class.show]="expanded">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" 
+             class="nav-link" (click)="closeNavbar()">
+            <mat-icon>home</mat-icon> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/about" routerLinkActive="active" class="nav-link" (click)="closeNavbar()">
+            <mat-icon>person</mat-icon> About
+          </a>
+        </li>
+           <li class="nav-item">
+          <a routerLink="/education" routerLinkActive="active" class="nav-link" (click)="closeNavbar()">
+            <mat-icon>school</mat-icon> Education
+          </a>
+        </li>
+          <li class="nav-item">
+          <a routerLink="/experience" routerLinkActive="active" class="nav-link" (click)="closeNavbar()">
+            <mat-icon>work</mat-icon> Experience
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/projects" routerLinkActive="active" class="nav-link" (click)="closeNavbar()">
+            <mat-icon>work</mat-icon> Projects
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/resume" routerLinkActive="active" class="nav-link" (click)="closeNavbar()">
+            <mat-icon>description</mat-icon> Resume
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a href="https://soumyajitblogs.vercel.app/" target="_blank" rel="noreferrer" class="nav-link">
+            <mat-icon>article</mat-icon> Blogs
+          </a>
+        </li> -->
+        <!-- <li class="nav-item fork-btn">
+          <a href="https://github.com/soumyajit4419/Portfolio" target="_blank" 
+             class="fork-btn-inner" mat-raised-button>
+            <mat-icon>star</mat-icon>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>

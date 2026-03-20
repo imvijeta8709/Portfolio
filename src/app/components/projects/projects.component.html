@@ -1,0 +1,36 @@
+<div class="project-section">
+  <div class="project-container">
+    <h1 class="project-heading">
+      My Recent <strong class="purple">Works</strong>
+    </h1>
+    <p style="color: white">
+      Here are a few projects I've worked on recently.
+    </p>
+    <div class="project-row">
+      <div class="project-card" *ngFor="let project of projects">
+        <mat-card class="project-card-view">
+          <img mat-card-image [src]="project.imgPath" [alt]="project.title" />
+          <mat-card-content>
+            <mat-card-title>{{ project.title }}</mat-card-title>
+            <p class="project-description">{{ project.description }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a [href]="project.ghLink" target="_blank" mat-raised-button color="primary">
+              <mat-icon>code</mat-icon>
+              {{ project.isBlog ? 'Blog' : 'GitHub' }}
+            </a>
+            <a *ngIf="!project.isBlog && project.demoLink" 
+               [href]="project.demoLink" 
+               target="_blank" 
+               mat-raised-button 
+               color="primary"
+               style="margin-left: 10px">
+              <mat-icon>language</mat-icon>
+              Demo
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,133 @@
+.about-section {
+  position: relative;
+  padding: 150px 2rem 30px;
+  min-height: 100vh;
+  color: white;
+  background-color: #0c0513;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-row {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.about-col {
+  flex: 1;
+
+  img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+}
+
+.project-heading {
+  color: white;
+  font-size: 2.3em;
+  font-weight: 500;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.quote-card-view {
+  background-color: transparent;
+  border: 1px solid rgba(200, 137, 230, 0.3);
+  color: white;
+
+  mat-card-content {
+    p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-activity {
+      list-style: none;
+      padding-left: 0;
+      margin: 1.5rem 0;
+
+      li {
+        padding: 0.5rem 0;
+        font-size: 1.1em;
+      }
+    }
+
+    footer {
+      margin-top: 1rem;
+      font-style: italic;
+    }
+  }
+}
+
+.tech-stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 20px 0;
+}
+
+.tech-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  opacity: 0.93;
+  outline: 1.7px solid rgba(200, 137, 230, 0.637);
+  border-radius: 24px;
+  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(30, 20, 40, 0.3);
+
+  &:hover {
+    transform: scale(1.05);
+    outline: 2.2px solid rgba(197, 115, 230, 0.883);
+  }
+
+  .tech-icon-images {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+
+  .tech-icons-text {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 100px 1rem 30px;
+  }
+
+  .about-row {
+    flex-direction: column;
+  }
+
+  .project-heading {
+    font-size: 1.8em;
+  }
+
+  .tech-icons {
+    padding: 8px 15px;
+    gap: 8px;
+
+    .tech-icon-images {
+      height: 1.3rem;
+      width: 1.3rem;
+    }
+
+    .tech-icons-text {
+      font-size: 0.9rem;
+    }
+  }
+}

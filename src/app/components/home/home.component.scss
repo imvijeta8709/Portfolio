@@ -1,0 +1,258 @@
+.home-section {
+  position: relative;
+  padding: 150px 2rem 30px;
+  min-height: 100vh;
+  background-color: #0c0513;
+}
+
+.home-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: whitesmoke;
+}
+
+.home-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home-header {
+  flex: 1;
+  padding-top: 80px;
+
+  .heading {
+    font-size: 2.4em;
+    padding-left: 50px;
+    padding-bottom: 15px;
+
+    .wave {
+      animation: wave-animation 2.1s infinite;
+      transform-origin: 70% 70%;
+      display: inline-block;
+    }
+  }
+
+  .heading-name {
+    font-size: 2.5em;
+    padding-left: 45px;
+
+    .main-name {
+      color: #cd5ff8;
+    }
+  }
+}
+
+.typewriter-container {
+  padding: 50px;
+  text-align: left;
+
+  .typewriter-text {
+    font-size: 2.2em;
+    color: #be6adf;
+    font-weight: 600;
+  }
+
+  .typewriter-cursor {
+    font-size: 2.4em;
+    color: #b562d6;
+    animation: blink 1s infinite;
+  }
+}
+
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-height: 650px;
+  }
+}
+
+.home-about-section {
+  padding: 70px 2rem;
+  background-color: #0c0513;
+}
+
+.home-about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-about-row {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.home-about-description {
+  flex: 2;
+  color: white;
+  padding-top: 100px;
+  text-align: center;
+
+  h1 {
+    font-size: 2.6em;
+    margin-bottom: 2rem;
+  }
+
+  .home-about-body {
+    padding-top: 50px;
+    font-size: 1.2em;
+    text-align: left;
+  }
+}
+
+.myAvtar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-top: 9em;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.home-social-container {
+  padding: 50px 2rem 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-about-social {
+  text-align: center;
+  color: white;
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2em;
+    margin-bottom: 2rem;
+  }
+
+  .home-about-social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .social-icons {
+      .home-social-icons {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.972);
+        border-radius: 50%;
+        transition: 0.5s;
+        text-decoration: none;
+
+        mat-icon {
+          color: #700c86;
+          font-size: 1.5rem;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: #68187a;
+          transition: 0.5s;
+          transform: scale(0.9);
+          z-index: -1;
+        }
+
+        &:hover::before {
+          transform: scale(1.1);
+          box-shadow: 0 0 15px #801f95;
+        }
+
+        &:hover {
+          box-shadow: 0 0 5px #87209e;
+
+          mat-icon {
+            color: #87209e;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .home-row {
+    flex-direction: column;
+  }
+
+  .home-header {
+    padding-top: 20px;
+
+    .heading,
+    .heading-name {
+      font-size: 1.8em;
+      padding-left: 20px;
+    }
+  }
+
+  .typewriter-container {
+    padding: 20px;
+
+    .typewriter-text {
+      font-size: 1.4em;
+    }
+
+    .typewriter-cursor {
+      display: none;
+    }
+  }
+
+  .home-about-row {
+    flex-direction: column;
+  }
+
+  .myAvtar {
+    padding-top: 2em;
+  }
+
+  .home-about-description {
+    padding-top: 20px;
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .home-about-body {
+      font-size: 1em;
+    }
+  }
+}

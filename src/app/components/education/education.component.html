@@ -1,0 +1,40 @@
+<div class="education-section">
+  <div class="education-container">
+    <h1 class="education-heading">
+      My <strong class="purple">Education</strong>
+    </h1>
+    <p style="color: white; text-align: center; margin-bottom: 3rem;">
+      Here is my educational background
+    </p>
+
+    <div class="education-timeline">
+      <div class="education-card" *ngFor="let edu of educationData">
+        <mat-card class="education-card-view">
+          <mat-card-header>
+            <mat-card-title>{{ edu.degree }}</mat-card-title>
+            <mat-card-subtitle>{{ edu.institution }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="education-details">
+              <div class="education-info">
+                <mat-icon>calendar_today</mat-icon>
+                <span>{{ edu.year }}</span>
+              </div>
+              <div class="education-info" *ngIf="edu.percentage">
+                <mat-icon>grade</mat-icon>
+                <span>{{ edu.percentage }}</span>
+              </div>
+              <div class="education-info" *ngIf="edu.location">
+                <mat-icon>location_on</mat-icon>
+                <span>{{ edu.location }}</span>
+              </div>
+            </div>
+            <p class="education-description" *ngIf="edu.description">
+              {{ edu.description }}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

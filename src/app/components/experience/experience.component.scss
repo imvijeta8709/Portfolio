@@ -1,0 +1,297 @@
+.experience-section {
+  position: relative;
+  padding: 150px 2rem 30px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0c0513 0%, #1a0b2e 50%, #0c0513 100%);
+  color: white;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-heading {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 600;
+  padding: 10px 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 40px 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, transparent, #c770f0, transparent);
+  }
+}
+
+.experience-card {
+  display: flex;
+  width: 100%;
+  position: relative;
+  padding-left: 80px;
+  animation: fadeInLeft 0.6s ease-out;
+
+  .timeline-dot {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #c770f0, #8a2be2);
+    border-radius: 50%;
+    border: 4px solid #0c0513;
+    box-shadow: 0 0 20px rgba(199, 112, 240, 0.8);
+    z-index: 2;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+  }
+
+  .experience-card-view {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(30, 20, 40, 0.8), rgba(50, 30, 60, 0.6));
+    border: 2px solid rgba(200, 137, 230, 0.4);
+    color: white;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(119, 53, 136, 0.3);
+
+    &:hover {
+      transform: translateX(10px) translateY(-5px);
+      box-shadow: 0 16px 48px rgba(119, 53, 136, 0.6);
+      border-color: rgba(200, 137, 230, 0.8);
+
+      mat-card-header {
+        background: linear-gradient(135deg, rgba(119, 53, 136, 0.7), rgba(200, 137, 230, 0.5));
+      }
+    }
+
+    mat-card-header {
+      background: linear-gradient(135deg, rgba(119, 53, 136, 0.5), rgba(200, 137, 230, 0.3));
+      padding: 2rem;
+      transition: all 0.4s ease;
+
+      mat-card-title {
+        color: #e0b3ff;
+        font-size: 1.8em;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 2px 8px rgba(200, 137, 230, 0.5);
+      }
+
+      mat-card-subtitle {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.3em;
+        font-weight: 500;
+      }
+    }
+
+    mat-card-content {
+      padding: 2rem;
+      background: rgba(10, 5, 20, 0.3);
+
+      .experience-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid rgba(199, 112, 240, 0.3);
+
+        .experience-info {
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+          color: rgba(255, 255, 255, 0.95);
+          padding: 0.5rem 1rem;
+          background: rgba(119, 53, 136, 0.2);
+          border-radius: 8px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: rgba(119, 53, 136, 0.4);
+            transform: translateY(-2px);
+          }
+
+          mat-icon {
+            color: #c770f0;
+            font-size: 1.3rem;
+            width: 1.3rem;
+            height: 1.3rem;
+          }
+
+          span {
+            font-size: 1.05rem;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .experience-responsibilities {
+        h4 {
+          color: #e0b3ff;
+          font-size: 1.3em;
+          margin-bottom: 1rem;
+          font-weight: 600;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 0.8rem 0;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+
+            &:hover {
+              transform: translateX(10px);
+              color: #e0b3ff;
+
+              mat-icon {
+                color: #8a2be2;
+              }
+            }
+
+            mat-icon {
+              color: #c770f0;
+              font-size: 1.2rem;
+              width: 1.2rem;
+              height: 1.2rem;
+              flex-shrink: 0;
+              margin-top: 2px;
+              transition: all 0.3s ease;
+            }
+
+            span {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 100px 1rem 30px;
+  }
+
+  .experience-heading {
+    font-size: 1.8em;
+  }
+
+  .experience-timeline {
+    &::before {
+      left: 15px;
+    }
+  }
+
+  .experience-card {
+    padding-left: 50px;
+
+    .timeline-dot {
+      left: 5px;
+      width: 20px;
+      height: 20px;
+
+      &::after {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    .experience-card-view {
+      mat-card-header {
+        padding: 1.5rem;
+
+        mat-card-title {
+          font-size: 1.4em;
+        }
+
+        mat-card-subtitle {
+          font-size: 1.1em;
+        }
+      }
+
+      mat-card-content {
+        padding: 1.5rem;
+
+        .experience-meta {
+          flex-direction: column;
+          gap: 0.8rem;
+
+          .experience-info {
+            width: fit-content;
+          }
+        }
+
+        .experience-responsibilities {
+          h4 {
+            font-size: 1.1em;
+          }
+
+          ul li {
+            font-size: 0.95rem;
+          }
+        }
+      }
+    }
+  }
+}
